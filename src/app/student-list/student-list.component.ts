@@ -10,4 +10,11 @@ import { CommonModule } from '@angular/common';
 })
 export class StudentListComponent {
   students: Student[] = [{name:"sara", age:15}, {name:"rivka", age:17}, {name:"rachel", age:19}];
+
+  deleteStudent(student : Student){
+    let indexToDelete = this.students.indexOf(student);
+    this.students.splice(indexToDelete,1);
+  }
+
+  constructor() {}
 }

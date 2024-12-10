@@ -1,5 +1,6 @@
-<ul>
-    <li *ngFor = "let student of students">
+<ul class = "list-group">
+    <li *ngFor = "let student of students" class = "list-group-item">
         name: {{student.name}}, age: {{student.age}}
+        <button (click)="deleteStudent(student)"> delete student</button>
     </li>
 </ul>
